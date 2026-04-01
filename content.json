@@ -1,0 +1,129 @@
+{
+  "rx-hero": {
+    "eyebrow": "#1 New Prescription in Its Class†",
+    "headline": "Treat & Help Prevent Migraine With One Medicine",
+    "subheadline": "For acute treatment, many patients experienced pain relief within 2 hours — in some patients lasting up to 48 hours.",
+    "disclaimer": "†Based on prescription data as brand in class (oral CGRP receptor antagonists). Current as of 2025.",
+    "ctaPrimary": "Discover the Benefits",
+    "ctaSecondary": "Get Savings Card",
+    "heroIcon": "💊"
+  },
+
+  "indication": {
+    "text": "<strong>INDICATION:</strong> Calvexa® (selvegepant) is indicated for the acute treatment of migraine attacks with or without aura, and for the preventive treatment of episodic migraine, in adults."
+  },
+
+  "two-ways": {
+    "eyebrow": "How it works",
+    "title": "Calvexa® helps treat migraine in 2 ways"
+  },
+
+  "way-acute": {
+    "title": "Acute Treatment",
+    "subtitle": "Treat attacks when they happen",
+    "stat1Pct": "59.3%",
+    "stat1Desc": "<strong>Pain relief at 2 hours</strong> vs 43.3% with placebo",
+    "stat2Pct": "21.2%",
+    "stat2Desc": "<strong>Pain freedom at 2 hours</strong> vs 10.9% with placebo",
+    "stat3Pct": "35.1%",
+    "stat3Desc": "<strong>Freedom from most bothersome symptom</strong> at 2 hours vs 26.8% with placebo",
+    "ctaText": "Learn About Acute Treatment",
+    "safetyNote": "Do not take more than 1 tablet in 24 hours."
+  },
+
+  "way-prevent": {
+    "title": "Prevention",
+    "subtitle": "Reduce migraine days every month",
+    "stat1Pct": "4.3",
+    "stat1Desc": "<strong>Fewer monthly migraine days</strong> during weeks 9–12 vs 3.5 fewer with placebo",
+    "stat2Pct": "50%",
+    "stat2Desc": "<strong>Of patients achieved ≥50% reduction</strong> in monthly migraine days vs 26% with placebo",
+    "stat3Pct": "Every other",
+    "stat3Desc": "<strong>Day dosing</strong> — one tablet every other day for prevention",
+    "ctaText": "Learn About Prevention",
+    "safetyNote": "Safety of more than 18 doses in a 30-day period has not been established."
+  },
+
+  "savings-card": {
+    "cardTag": "Savings Card",
+    "amount": "as little as $0*",
+    "amountLabel": "per prescription fill for eligible patients",
+    "benefit1": "Eligible commercially insured patients",
+    "benefit2": "No membership fees required",
+    "benefit3": "Download your card instantly",
+    "benefit4": "Use at participating pharmacies nationwide",
+    "ctaText": "Download Savings Card"
+  },
+
+  "savings-copy": {
+    "eyebrow": "Affordability",
+    "headline": "Get Calvexa® for as little as $0*",
+    "body": "We believe cost should never be a barrier to migraine relief. Eligible commercially insured patients can access Calvexa® with significant savings through our patient support program.",
+    "disclaimer": "*Eligible commercially insured patients may pay as little as $0 per prescription. Insurance coverage must be approved. Not valid for patients enrolled in Medicare, Medicaid, or other federal/state programs. Maximum annual benefit applies. Terms and conditions apply."
+  },
+
+  "stories-header": {
+    "eyebrow": "Patient Experiences",
+    "title": "Real patients. Real stories."
+  },
+
+  "stories": [
+    {
+      "avatar": "👩‍🦱",
+      "name": "Maria, 38",
+      "tag": "Migraine for 12 years",
+      "quote": "I used to cancel plans all the time. Since starting Calvexa®, I've been able to show up for my family again."
+    },
+    {
+      "avatar": "👨‍💼",
+      "name": "James, 45",
+      "tag": "Chronic migraine sufferer",
+      "quote": "The dissolving tablet is so convenient. I always have it with me and it starts working fast."
+    },
+    {
+      "avatar": "👩‍🔬",
+      "name": "Priya, 31",
+      "tag": "Episodic migraine, 8 years",
+      "quote": "My migraines were affecting my work. The prevention aspect of Calvexa® has changed everything for me."
+    }
+  ],
+
+  "signup-copy": {
+    "eyebrow": "Patient Support",
+    "headline": "Sign up for helpful tips & updates",
+    "point1": "How Calvexa® works and how it can help",
+    "point2": "Methods of managing your migraine attacks",
+    "point3": "Tips for talking to your healthcare provider",
+    "point4": "Real patient stories and experiences"
+  },
+
+  "signup-form": {
+    "label1": "First Name",
+    "label2": "Email Address",
+    "label3": "Are you currently taking Calvexa®?",
+    "ctaText": "Sign Up for Patient Support",
+    "legalText": "By signing up, you agree to receive communications from NovaPharm. You can unsubscribe at any time. See our Privacy Policy."
+  },
+
+  "isi-sticky": {
+    "text": "<strong>IMPORTANT SAFETY INFORMATION:</strong> Calvexa® (selvegepant) is contraindicated in patients with known hypersensitivity to selvegepant or any excipients. The most common adverse reactions (≥2%) were nausea, indigestion, and abdominal pain. Do not use in patients with severe hepatic impairment. <strong>Please see full Prescribing Information and Patient Information.</strong>"
+  },
+
+  "isi-full": {
+    "heading": "Important Safety Information",
+    "contraTitle": "CONTRAINDICATIONS",
+    "contraText": "Calvexa® (selvegepant) is contraindicated in patients with known hypersensitivity to selvegepant or to any of the excipients of Calvexa®. Hypersensitivity reactions, including facial swelling and urticaria, have been reported.",
+    "warningsTitle": "WARNINGS AND PRECAUTIONS",
+    "warningsText": "Hypersensitivity Reactions: Hypersensitivity reactions have been reported. If a serious or severe hypersensitivity reaction occurs, discontinue Calvexa® and initiate appropriate therapy. Hepatic Impairment: Avoid use in patients with severe hepatic impairment. Breastfeeding: There are no data on the presence of selvegepant in human milk.",
+    "adverseTitle": "ADVERSE REACTIONS",
+    "adverseText": "The most common adverse reactions (≥2% and greater than placebo) in acute treatment clinical trials were: nausea (2.7%), indigestion (2.4%), and abdominal pain (1.5%). The most common adverse reactions in the prevention clinical trial were: urinary tract infection, nausea, and upper respiratory tract infection.",
+    "useTitle": "USE IN SPECIFIC POPULATIONS",
+    "useText": "Pregnancy: Based on available data, there are no identified risks of major birth defects, miscarriage, or adverse maternal or fetal outcomes associated with selvegepant. Paediatrics: Safety and effectiveness in paediatric patients have not been established."
+  },
+
+  "rx-footer": {
+    "brandSub": "(selvegepant) Orally Dissolving Tablet 75 mg — Rx Only",
+    "company": "Manufactured by NovaPharm Inc.",
+    "legalFooter": "Calvexa® and selvegepant are registered trademarks of NovaPharm Inc. © 2025 NovaPharm Inc. All rights reserved. Calvexa® is a prescription medicine. Please see full Prescribing Information and Patient Information. This site is intended for US residents only.<br><br>This is a fictional demonstration website created for Adobe Universal Editor testing purposes. Calvexa® (selvegepant) is a fictional drug. All clinical data shown is illustrative only and not real medical data. NovaPharm Inc. is a fictional company."
+  }
+}

@@ -1,0 +1,120 @@
+[
+  {
+    "id": "rx-hero",
+    "fields": [
+      { "component": "text", "name": "eyebrow",      "label": "Eyebrow badge",    "valueType": "string" },
+      { "component": "text", "name": "headline",     "label": "Main headline",    "valueType": "string" },
+      { "component": "text", "name": "subheadline",  "label": "Subheadline",      "valueType": "string" },
+      { "component": "text", "name": "disclaimer",   "label": "Disclaimer",       "valueType": "string" },
+      { "component": "text", "name": "ctaPrimary",   "label": "Primary CTA",      "valueType": "string" },
+      { "component": "text", "name": "ctaSecondary", "label": "Secondary CTA",    "valueType": "string" },
+      { "component": "text", "name": "heroIcon",     "label": "Hero icon (emoji)","valueType": "string" }
+    ]
+  },
+  {
+    "id": "indication",
+    "fields": [
+      { "component": "richtext", "name": "text", "label": "Indication text", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "two-ways",
+    "fields": [
+      { "component": "text", "name": "eyebrow", "label": "Section tag",   "valueType": "string" },
+      { "component": "text", "name": "title",   "label": "Section title", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "way-card",
+    "fields": [
+      { "component": "text",     "name": "title",      "label": "Card title",     "valueType": "string" },
+      { "component": "text",     "name": "subtitle",   "label": "Card subtitle",  "valueType": "string" },
+      { "component": "text",     "name": "stat1Pct",   "label": "Stat 1 %",       "valueType": "string" },
+      { "component": "richtext", "name": "stat1Desc",  "label": "Stat 1 desc",    "valueType": "string" },
+      { "component": "text",     "name": "stat2Pct",   "label": "Stat 2 %",       "valueType": "string" },
+      { "component": "richtext", "name": "stat2Desc",  "label": "Stat 2 desc",    "valueType": "string" },
+      { "component": "text",     "name": "stat3Pct",   "label": "Stat 3 %",       "valueType": "string" },
+      { "component": "richtext", "name": "stat3Desc",  "label": "Stat 3 desc",    "valueType": "string" },
+      { "component": "text",     "name": "ctaText",    "label": "CTA button",     "valueType": "string" },
+      { "component": "text",     "name": "safetyNote", "label": "Safety note",    "valueType": "string" }
+    ]
+  },
+  {
+    "id": "savings-card",
+    "fields": [
+      { "component": "text", "name": "cardTag",     "label": "Card tag",      "valueType": "string" },
+      { "component": "text", "name": "amount",      "label": "Amount",        "valueType": "string" },
+      { "component": "text", "name": "amountLabel", "label": "Amount label",  "valueType": "string" },
+      { "component": "text", "name": "benefit1",    "label": "Benefit 1",     "valueType": "string" },
+      { "component": "text", "name": "benefit2",    "label": "Benefit 2",     "valueType": "string" },
+      { "component": "text", "name": "benefit3",    "label": "Benefit 3",     "valueType": "string" },
+      { "component": "text", "name": "benefit4",    "label": "Benefit 4",     "valueType": "string" },
+      { "component": "text", "name": "ctaText",     "label": "CTA button",    "valueType": "string" }
+    ]
+  },
+  {
+    "id": "story-card",
+    "fields": [
+      { "component": "text",     "name": "avatar", "label": "Avatar emoji",  "valueType": "string" },
+      { "component": "text",     "name": "name",   "label": "Patient name",  "valueType": "string" },
+      { "component": "text",     "name": "tag",    "label": "Story tag",     "valueType": "string" },
+      { "component": "richtext", "name": "quote",  "label": "Patient quote", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "signup-copy",
+    "fields": [
+      { "component": "text", "name": "eyebrow",  "label": "Eyebrow",   "valueType": "string" },
+      { "component": "text", "name": "headline", "label": "Headline",  "valueType": "string" },
+      { "component": "text", "name": "point1",   "label": "Point 1",   "valueType": "string" },
+      { "component": "text", "name": "point2",   "label": "Point 2",   "valueType": "string" },
+      { "component": "text", "name": "point3",   "label": "Point 3",   "valueType": "string" },
+      { "component": "text", "name": "point4",   "label": "Point 4",   "valueType": "string" }
+    ]
+  },
+  {
+    "id": "signup-form",
+    "fields": [
+      { "component": "text", "name": "label1",    "label": "Field label 1",  "valueType": "string" },
+      { "component": "text", "name": "label2",    "label": "Field label 2",  "valueType": "string" },
+      { "component": "text", "name": "label3",    "label": "Field label 3",  "valueType": "string" },
+      { "component": "text", "name": "ctaText",   "label": "Submit button",  "valueType": "string" },
+      { "component": "text", "name": "legalText", "label": "Legal text",     "valueType": "string" }
+    ]
+  },
+  {
+    "id": "isi-sticky",
+    "fields": [
+      { "component": "richtext", "name": "text", "label": "ISI short text", "valueType": "string" }
+    ]
+  },
+  {
+    "id": "isi-full",
+    "fields": [
+      { "component": "text",     "name": "heading",       "label": "ISI heading",          "valueType": "string" },
+      { "component": "text",     "name": "contraTitle",   "label": "Contraindications heading", "valueType": "string" },
+      { "component": "richtext", "name": "contraText",    "label": "Contraindications text","valueType": "string" },
+      { "component": "text",     "name": "warningsTitle", "label": "Warnings heading",      "valueType": "string" },
+      { "component": "richtext", "name": "warningsText",  "label": "Warnings text",         "valueType": "string" },
+      { "component": "text",     "name": "adverseTitle",  "label": "Adverse reactions heading","valueType": "string" },
+      { "component": "richtext", "name": "adverseText",   "label": "Adverse reactions text","valueType": "string" },
+      { "component": "text",     "name": "useTitle",      "label": "Use in populations heading","valueType": "string" },
+      { "component": "richtext", "name": "useText",       "label": "Use in populations text","valueType": "string" }
+    ]
+  },
+  {
+    "id": "rx-footer",
+    "fields": [
+      { "component": "text",     "name": "brandSub",    "label": "Brand subtitle", "valueType": "string" },
+      { "component": "text",     "name": "company",     "label": "Company name",   "valueType": "string" },
+      { "component": "richtext", "name": "legalFooter", "label": "Legal footer",   "valueType": "string" }
+    ]
+  },
+  {
+    "id": "section-header",
+    "fields": [
+      { "component": "text", "name": "eyebrow", "label": "Eyebrow", "valueType": "string" },
+      { "component": "text", "name": "title",   "label": "Heading", "valueType": "string" }
+    ]
+  }
+]
