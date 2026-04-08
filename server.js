@@ -99,52 +99,40 @@ function getFieldDefs_old(modelId) {
     { name: 'text', label: 'Text', component: 'text', valueType: 'string' },
   ];
 }
+
+
 function getFieldDefs(modelId) {
-  const models = {
-    hero: [
-      { id: 'badge',        label: 'Badge Text',      type: 'string'   },
-      { id: 'headline',     label: 'Headline',        type: 'string'   },
-      { id: 'description',  label: 'Description',     type: 'richtext' },
-      { id: 'ctaPrimary',   label: 'Primary Button',  type: 'string'   },
-      { id: 'ctaSecondary', label: 'Secondary Button',type: 'string'   },
-    ],
-    stats: [
-      { id: 'stat1Value', label: 'Stat 1 Number', type: 'string' },
-      { id: 'stat1Label', label: 'Stat 1 Label',  type: 'string' },
-      { id: 'stat2Value', label: 'Stat 2 Number', type: 'string' },
-      { id: 'stat2Label', label: 'Stat 2 Label',  type: 'string' },
-      { id: 'stat3Value', label: 'Stat 3 Number', type: 'string' },
-      { id: 'stat3Label', label: 'Stat 3 Label',  type: 'string' },
-    ],
-    'features-header': [
-      { id: 'eyebrow', label: 'Eyebrow', type: 'string' },
-      { id: 'title',   label: 'Heading', type: 'string' },
-    ],
-    feature: [
-      { id: 'icon',        label: 'Icon (emoji)', type: 'string'   },
-      { id: 'title',       label: 'Title',        type: 'string'   },
-      { id: 'description', label: 'Description',  type: 'richtext' },
-    ],
-    'team-header': [
-      { id: 'eyebrow', label: 'Eyebrow', type: 'string' },
-      { id: 'title',   label: 'Heading', type: 'string' },
-    ],
-    'team-member': [
-      { id: 'avatar', label: 'Avatar (emoji)', type: 'string'   },
-      { id: 'name',   label: 'Name',           type: 'string'   },
-      { id: 'role',   label: 'Role',           type: 'string'   },
-      { id: 'bio',    label: 'Bio',            type: 'richtext' },
-    ],
-    cta: [
-      { id: 'headline',   label: 'Headline', type: 'string' },
-      { id: 'subtext',    label: 'Subtext',  type: 'string' },
-      { id: 'buttonText', label: 'Button',   type: 'string' },
-    ],
-  };
- 
-  return models[modelId] || [
-    { id: 'text', label: 'Text', type: 'string' },
-  ];
+  const models = {
+    hero: {
+      badge:  { label: 'Badge Text',  type: 'string' },
+      headline: { label: 'Headline',  type: 'string' },
+      description:{ label: 'Description', type: 'richtext' },
+      ctaPrimary:{ label: 'Primary Button',  type: 'string' },
+      ctaSecondary: { label: 'Secondary Button', type: 'string' },
+    },
+    stats: {
+      stat1Value: { label: 'Stat 1 Number', type: 'string' },
+      stat1Label: { label: 'Stat 1 Label',type: 'string' },
+      stat2Value: { label: 'Stat 2 Number', type: 'string' },
+      stat2Label: { label: 'Stat 2 Label',type: 'string' },
+      stat3Value: { label: 'Stat 3 Number', type: 'string' },
+      stat3Label: { label: 'Stat 3 Label',type: 'string' },
+    },
+    feature: {
+      icon:{ label: 'Icon',type: 'string' },
+      title:{ label: 'Title',type: 'string' },
+      description: { label: 'Description', type: 'richtext' },
+    },
+
+    cta: {
+      headline:{ label: 'Headline', type: 'string' },
+      subtext:{ label: 'Subtext', type: 'string' },
+      buttonText: { label: 'Button', type: 'string' },
+    },
+    };
+    return models[modelId] || {
+      text: { label: 'Text', type: 'string' },
+    };
 }
 
 
@@ -226,7 +214,54 @@ app.post('/configuration', (req, res) => {
 //  ADOBE UNIVERSAL EDITOR ENDPOINTS
 // ══════════════════════════════════════════════════════════
 
-app.get('/details', (req, res) => {
+app.post('/details', (req, res) => {
+  try {
+    const target   = req.body?.target || {};
+    const resource = target.resource || '';
+    const modelId  = target.model || '';
+ 
+    const { sectionKey, arrayIndex } = parseResource(resource);
+ 
+    // Load current content
+    let currentData = {};
+    if (sectionKey && content[sectionKey]) {
+      const section = content[sectionKey];
+      currentData =
+        arrayIndex !== null && Array.isArray(section)
+          ? section[arrayIndex] || {}
+          : section;
+    }
+ 
+    // Get model field definitions
+    const fields = getFieldDefs(modelId || sectionKey);
+ 
+    // 🔑 Normalize properties (ALL fields must exist)
+    const properties = {};
+    Object.keys(fields).forEach(key => {
+      properties[key] = currentData[key] ?? '';
+    });
+ 
+    // ✅ REQUIRED RESPONSE SHAPE
+    res.json({
+      target: { resource },
+      properties,
+      model: {
+        id: modelId || sectionKey,
+        fields,
+      }
+    });
+ 
+  } catch (err) {
+    console.error('[POST /details ERROR]', err);
+    res.status(200).json({
+      target: { resource: '' },
+      properties: {},
+      model: { id: '', fields: {} }
+    });
+  }
+});
+
+app.get('/details_old', (req, res) => {
   console.log('[GET /details]');
   res.json({ status: 'ok', properties: {} });
 });
@@ -370,6 +405,7 @@ app.patch('/api/content', (req, res) => {
   saveContent(content);
   res.json({ ok: true, updated: { key, prop, value } });
 });
+
 
 // ── Start ──────────────────────────────────────────────────
 app.listen(PORT, () => {
