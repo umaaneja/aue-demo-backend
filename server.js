@@ -214,7 +214,7 @@ app.post('/configuration', (req, res) => {
 //  ADOBE UNIVERSAL EDITOR ENDPOINTS
 // ══════════════════════════════════════════════════════════
 
-app.post('/details', (req, res) => {
+app.post('/details_remove', (req, res) => {
   try {
     const target   = req.body?.target || {};
     const resource = target.resource || '';
