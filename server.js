@@ -167,7 +167,7 @@ function parseResource(resource) {
   const contentPath = resource.replace(/^urn:[^:]+:/, '');
   const parts       = contentPath.replace(/^\/content\//, '').split('/');
   return {
-    sectionKey: parts[0] || 'hero',
+    sectionKey: parts[0] || '',
     arrayIndex: parts[1] ? parseInt(parts[1], 10) - 1 : null,
   };
 }
@@ -298,7 +298,7 @@ app.post('/details', (req, res) => {
       target: { resource },   // UE requires echo
       properties,
       model: {
-        id: "hero",
+        id: modelId,
         fields,
       },
     });
