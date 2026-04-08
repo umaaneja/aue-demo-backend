@@ -266,9 +266,56 @@ app.get('/details_old', (req, res) => {
   res.json({ status: 'ok', properties: {} });
 });
 
+app.post('/details', (req, res) => {
+  try {
+    const target   = req.body?.target || {};
+    const resource = target.resource || '';
+ 
+    // ✅ ALWAYS derive model from resource
+    const { sectionKey, arrayIndex } = parseResource(resource);
+    const modelId = sectionKey; // ← THIS IS THE FIX
+ 
+    // Load existing content
+    let currentData = {};
+    if (sectionKey && content[sectionKey]) {
+      const section = content[sectionKey];
+      currentData =
+        arrayIndex !== null && Array.isArray(section)
+          ? section[arrayIndex] || {}
+          : section;
+    }
+ 
+    // Get model fields
+    const fields = getFieldDefs(modelId);
+ 
+    // ✅ Normalize ALL properties
+    const properties = {};
+    Object.keys(fields).forEach(key => {
+      properties[key] = currentData[key] ?? '';
+    });
+ 
+    res.json({
+      target: { resource },   // UE requires echo
+      properties,
+      model: {
+        id: modelId,
+        fields,
+      },
+    });
+ 
+  } catch (err) {
+    console.error('[POST /details]', err);
+    res.status(200).json({
+      target: { resource: '' },
+      properties: {},
+      model: { id: '', fields: {} },
+    });
+  }
+});
+
 // /details — Adobe calls this when a component is clicked
 // Returns: current field values + field definitions for the properties panel
-app.post('/details', (req, res) => {
+app.post('/details_remove', (req, res) => {
   console.log('[POST /details]', JSON.stringify(req.body, null, 2));
   try {
     const target   = req.body?.target || {};
