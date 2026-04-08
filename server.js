@@ -371,7 +371,6 @@ app.patch('/api/content', (req, res) => {
   res.json({ ok: true, updated: { key, prop, value } });
 });
 
-
 // ── Start ──────────────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`✅ NovaTech UE Backend running on port ${PORT}`);
