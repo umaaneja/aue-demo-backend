@@ -167,7 +167,7 @@ function parseResource(resource) {
   const contentPath = resource.replace(/^urn:[^:]+:/, '');
   const parts       = contentPath.replace(/^\/content\//, '').split('/');
   return {
-    sectionKey: parts[0] || '',
+    sectionKey: parts[0] || 'hero',
     arrayIndex: parts[1] ? parseInt(parts[1], 10) - 1 : null,
   };
 }
