@@ -298,7 +298,7 @@ app.post('/details', (req, res) => {
       target: { resource },   // UE requires echo
       properties,
       model: {
-        id: modelId,
+        id: "hero",
         fields,
       },
     });
